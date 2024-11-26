@@ -1,0 +1,29 @@
+
+*{
+color: white;
+font-family: "FontAwesome";
+}
+
+
+
+#waybar {
+	background: transparent;
+}
+
+#workspaces {
+	background: transparent;
+	border-radius: 20px;
+	font-size: 10px;
+}
+
+#clock {
+	background: transparent;
+	font-size: 17px;
+	font-family: monospace;
+}
+
+#battery {
+	background: transparent;
+	font-size: 17px;
+	font-family:monospace;
+}
