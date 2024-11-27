@@ -1,5 +1,5 @@
 # dotland-Hyprfiles
-A simple, minimal set of dotfiles for configuring Hyprland. These configurations are designed to provide an efficient and clean desktop environment with essential features only
+A simple, minimal set of dotfiles for configuring Hyprland. These configurations are designed to provide an efficient and clean desktop environment with essential features only.
 ## features
 
 **Minimal Hyprland setup**: Lightweight configuration focused on functionality.
