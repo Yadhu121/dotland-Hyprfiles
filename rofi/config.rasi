@@ -1,0 +1,30 @@
+configuration {
+    modi: "run";              /* Only the 'run' mode enabled */
+    lines: 0;                 /* Don't show any lines initially */
+    filter: "";               /* Starts with no filter (empty search) */
+    case-sensitive: false;    /* Search is case-insensitive */
+    disable-history: true;    /* Disable command history */
+    show-icons: false;        /* Disable icons for applications */
+    icon-theme: "Papirus";    /* Optional: Icon theme */
+    timeout: 100;             /* Timeout for updating results after typing */
+    matching: "fuzzy";        /* Use fuzzy matching for faster results */
+}
+
+* {
+    background: rgba(0, 0, 0, 0);  /* Fully transparent background */
+    foreground: #ffffff;            /* Text color */
+    selected: #5050ff;              /* Color of the selected item */
+    border: rgba(0, 0, 0, 0);       /* Transparent border */
+    border-width: 2px;              /* Border width */
+}
+
+/* Uniform row colors */
+rofi {
+    normal-bg: rgba(0, 0, 0, 0); /* Set background of all items to transparent */
+    normal-fg: #ffffff;          /* Text color for normal items */
+    selected-bg: #5050ff;        /* Selected item background */
+    selected-fg: #ffffff;        /* Selected item text color */
+    urgent-bg: rgba(0, 0, 0, 0); /* Set background of urgent items to transparent */
+    urgent-fg: #ff0000;          /* Urgent item text color (optional) */
+}
+
