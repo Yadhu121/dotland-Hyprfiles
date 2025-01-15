@@ -1,4 +1,0 @@
-preload = "~/.config/.wallpaper/wallpaper.png"
-wallpaper = eDP1,"~/.config/.wallpaper/wallpaper.png"
-splash = true
-ipc = off

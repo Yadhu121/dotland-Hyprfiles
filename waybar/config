@@ -1,30 +1,29 @@
 {
+	"position": "top",
 	"layer": "top",
 	"margin-top": 0,
 	"margin-bottom": 0,
 	"margin-left": 0,
 	"margin-right": 5,
-	"modules-left": ["hyprland/workspaces"],
-	"modules-center": ["clock"],
-	"modules-right": ["bluetooth","custom/brightness"],
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["battery","custom/brightness"],
 
-	"bluetooth":{
-		"format": "{status}",
-		"format-connected": "",
-		"format-disconnected": "",
-		"format-powered-on": "",
-		"format-powered-off": "",
-		"on-click": "blueman-manager"
-	},
+"battery": {
+	"format": " {capacity}%",
+	"tooltip": true,
+},
 
-	"custom/brightness":{
-		"format": "{}",
-		"exec": "~/.config/waybar/scripts/brightness.sh",
-		"interval": 1,
-    		"tooltip": false,
-    		"on-click": "~/.config/waybar/scripts/brightness.sh click",
-    		"on-scroll-up": "~/.config/waybar/scripts/brightness.sh scroll-up",
-    		"on-scroll-down": "~/.config/waybar/scripts/brightness.sh scroll-down"
-	}
+"custom/brightness": {
+	"min": 0,
+	"max": 100,
+	"orientation": "horizontal",
+	"device": "intel_backlight"
+},
 
+"style": {
+    "background": "#000000",
+    "background_opacity": 0.0
 }
+}
+
