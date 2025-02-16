@@ -7,10 +7,7 @@ font-family: "FontAwesome";
 
 
 #waybar {
-        background-color: rgba(0, 0, 0, 0.5);
-        border-radius: 0px;
-	min-height: 50px
-
+	background: black;
 }
 
 #workspaces {
@@ -25,8 +22,16 @@ font-family: "FontAwesome";
 	font-family: monospace;
 }
 
-#battery {
-	background: transparent;
-	font-size: 17px;
-	font-family:monospace;
+#workspaces button {
+    color: #d3d3d3;
+    background: transparent;
+    border: none;
 }
+
+#workspaces button.active {
+    color: #ffffff;
+    background: #5e81ac;
+    border-radius: 5px;
+    padding: 5px;
+}
+

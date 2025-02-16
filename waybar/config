@@ -1,27 +1,49 @@
 {
-	"position": "top",
 	"layer": "top",
-	"height": 10,
 	"margin-top": 0,
 	"margin-bottom": 0,
 	"margin-left": 0,
-	"margin-right": 5,
-  "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["clock"],
-  "modules-right": ["battery","custom/brightness"],
+	"margin-right": 0,
+	"modules-left": ["hyprland/workspaces"],
+	"modules-center": ["clock"],
+	"modules-right": ["bluetooth","custom/brightness"],
 
-"battery": {
-	"format": " {capacity}%",
-	"tooltip": true,
-},
+	"bluetooth":{
+		"format": "{status}",
+		"format-connected": "",
+		"format-disconnected": "",
+		"format-powered-on": "",
+		"format-powered-off": "",
+		"on-click": "blueman-manager"
+	},
 
-"custom/brightness": {
-	"min": 0,
-	"max": 100,
-	"orientation": "horizontal",
-	"device": "intel_backlight"
-},
+	"custom/brightness":{
+		"format": "{}",
+		"exec": "~/.config/waybar/scripts/brightness.sh",
+		"interval": 1,
+    		"tooltip": false,
+    		"on-click": "~/.config/waybar/scripts/brightness.sh click",
+    		"on-scroll-up": "~/.config/waybar/scripts/brightness.sh scroll-up",
+    		"on-scroll-down": "~/.config/waybar/scripts/brightness.sh scroll-down"
+	},
 
-    "style": "~/.config/waybar/style.css"
+	"hyprland/workspaces": {
+    		"format": "{icon}",
+    	"on-click": "hyprctl dispatch workspace {id}",
+    	"format-icons": {
+        	"1": "",
+        	"2": "",
+        	"3": "",
+        	"4": "",
+        	"5": "",
+        	"6": "",
+        	"7": "",
+        	"8": "",
+        	"9": "",
+        	"10": ""
+    		},
+	    	"persistent": true,
+    		"active-only": false
+	}
+
 }
-
