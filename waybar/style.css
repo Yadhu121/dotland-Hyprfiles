@@ -4,10 +4,9 @@ color: white;
 font-family: "FontAwesome";
 }
 
-
-
 #waybar {
-	background: black;
+    background: rgba(0,0,0,0.4);
+    border-radius: 0px;
 }
 
 #workspaces {
