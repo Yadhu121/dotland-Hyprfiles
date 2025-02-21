@@ -2,6 +2,7 @@
 *{
 color: white;
 font-family: "FontAwesome";
+background : transparent;
 }
 
 #waybar {
@@ -11,7 +12,7 @@ font-family: "FontAwesome";
 
 #workspaces {
 	background: transparent;
-	border-radius: 20px;
+	border-radius: 0px;
 	font-size: 10px;
 }
 
@@ -30,7 +31,7 @@ font-family: "FontAwesome";
 #workspaces button.active {
     color: #ffffff;
     background: #5e81ac;
-    border-radius: 5px;
+    border-radius: 0px;
     padding: 5px;
 }
 
