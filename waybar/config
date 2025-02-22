@@ -9,13 +9,17 @@
 	"modules-center": ["hyprland/window"],
 	"modules-right": ["bluetooth","custom/brightness","pulseaudio","battery","network","tray"],
 
-	"bluetooth":{
-		"format": "{status}",
-		"format-connected": "",
-		"format-disconnected": "",
-		"format-powered-on": "",
-		"format-powered-off": "",
-		"on-click": "blueman-manager"
+	"bluetooth": {
+    		"format": "{icon} {status}",
+    		"format-connected": " {device_alias}",
+    		"format-disconnected": " Off",
+    		"format-icons": {
+        		"enabled": "", 
+        		"disabled": "",
+        		"connected": "",
+        		"connecting": ""
+    		},
+    		"tooltip": true
 	},
 
 	"custom/brightness":{
@@ -76,8 +80,8 @@
         	"tooltip": true
     	},
 
-    "tray": {
-        "spacing": 10
-    }
+    	"tray": {
+        	"spacing": 10
+    	}
 
 }
