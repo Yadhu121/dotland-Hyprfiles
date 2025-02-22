@@ -62,15 +62,15 @@
 	},
 
 	"battery": {
-        	"format": "{capacity}% {icon}",
-        	"format-charging": " {capacity}%",
-        	"format-plugged": " {capacity}%",
-        	"format-icons": ["", "", "", "", ""],
-        	"tooltip": true
-    	},
+    		"format": "{capacity}% {icon}",
+    		"format-charging": "󰂄 {capacity}%",
+    		"format-plugged": "󰂅 {capacity}%",
+    		"format-icons": ["󰂎", "󰂍", "󰂌", "󰂋", "󰂊"], 
+    		"tooltip": true
+	},
 
 	"network": {
-        	"format-wifi": "  {essid} {signalStrength}%",
+        	"format-wifi": " {essid} {signalStrength}%",
         	"format-ethernet": " Connected",
         	"format-disconnected": " No Network",
         	"tooltip": true
