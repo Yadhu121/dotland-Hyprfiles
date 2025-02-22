@@ -35,3 +35,11 @@ background : transparent;
     padding: 5px;
 }
 
+#window, #hyprland-window {
+    font-size: 14px;
+    color: #ffcc00;
+    font-weight: bold;
+    background: transparent;
+    padding: 2px 10px;
+}
+

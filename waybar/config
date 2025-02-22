@@ -6,8 +6,8 @@
 	"margin-left": 0,
 	"margin-right": 0,
 	"modules-left": ["hyprland/workspaces","clock"],
-	"modules-center": [],
-	"modules-right": ["bluetooth","custom/brightness"],
+	"modules-center": ["hyprland/window"],
+	"modules-right": ["bluetooth","custom/brightness","pulseaudio"],
 
 	"bluetooth":{
 		"format": "{status}",
@@ -45,6 +45,21 @@
     		},
 	    	"persistent": true,
     		"active-only": false
-	}
+	},
+	"hyprland/window": {
+	    	"format": "{}",
+    		"max-length": 100
+	},
+
+	"pulseaudio": {
+		"format": "{icon} {volume}%",
+    		"format-muted": "🔇 Muted",
+    		"format-icons": ["", "", ""],
+    		"on-click": "pavucontrol",
+		"on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%; [ $(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}' | tr -d '%') -gt 100 ] && pactl set-sink-volume @DEFAULT_SINK@ 100%",
+		"on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+
+	},
+
 
 }
