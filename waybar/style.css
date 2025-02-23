@@ -18,9 +18,11 @@
 }
 
 #clock {
-	background: transparent;
-	font-size: 17px;
-	font-family: monospace;
+    background: transparent;
+    font-size: 17px;
+    font-family: monospace;
+    font-weight: 700;
+    color: #D98324;
 }
 
 #workspaces button {
@@ -37,34 +39,46 @@
 }
 
 #window, #hyprland-window {
+	color: #B5CFB7;
 	font-size: 14px;
-	color: #ffcc00;
 	font-weight: bold;
 	background: transparent;
 	padding: 2px 10px;
 }
 
 #bluetooth {
-	margin-right: 10px;	
+	margin-right: 10px;
+	color: #00879E;	
 }
 
 #pulseaudio {
 	margin-left: 10px;
 	margin-right: 10px;
+	color: #A6CDC6;
 }
 
 #battery {
 	margin-right: 10px;
+	color: #FF9D23;
 }
 
 #network {
-	margin-right: 10px
+	margin-right: 10px;
+	color: #C14600;
 }
 
 window#waybar {
+	color: #B5CFB7;
     background: rgba(0, 0, 0, 0);
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: 0px;
     padding: 5px;
 }
 
+#custom-brightness {
+	color: #A1D6B2;
+}
+
+window {
+	color: #B5CFB7;
+}
