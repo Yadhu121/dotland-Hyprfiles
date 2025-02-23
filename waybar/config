@@ -7,7 +7,7 @@
 	"margin-right": 0,
 	"modules-left": ["hyprland/workspaces","clock"],
 	"modules-center": ["hyprland/window"],
-	"modules-right": ["bluetooth","custom/brightness","pulseaudio","battery","network","tray"],
+	"modules-right": ["bluetooth","custom/brightness","pulseaudio","battery","network"],
 
 	"bluetooth": {
     		"format": "{icon} {status}",
@@ -34,22 +34,28 @@
 
 	"hyprland/workspaces": {
     		"format": "{icon}",
-    	"on-click": "hyprctl dispatch workspace {id}",
-    	"format-icons": {
-        	"1": "",
-        	"2": "",
-        	"3": "",
-        	"4": "",
-        	"5": "",
-        	"6": "",
-        	"7": "",
-        	"8": "",
-        	"9": "",
-        	"10": ""
+    		"on-click": "hyprctl dispatch workspace {id}",
+		"format-icons": {
+		    	"1": "󰮯",
+            		"2": "󰈹",
+            		"3": "",
+            		"4": "󱊷",
+            		"5": "",
+            		"6": "",
+            		"7": "",
+            		"8": " ",
+            		"9": "",
+            		"10": "",
+		},
+		"persistent": true,
+    		"active-only": false,
+		"persistent_workspaces": {
+        		"1": {},
+        		"2": {},
+        		"3": {}
     		},
-	    	"persistent": true,
-    		"active-only": false
 	},
+
 	"hyprland/window": {
 	    	"format": "{}",
     		"max-length": 100
@@ -79,9 +85,5 @@
         	"format-disconnected": " No Network",
         	"tooltip": true
     	},
-
-    	"tray": {
-        	"spacing": 10
-    	}
 
 }

@@ -1,6 +1,6 @@
 configuration {
     modi: "run";
-    lines: 0;
+    lines: 4;
     filter: "";
     case-sensitive: false;
     disable-history: true;
@@ -11,19 +11,23 @@ configuration {
 }
 
 * {
-    background: rgba(0, 0, 0, 0);
-    foreground: #ffffff;         
-    selected: #5050ff;           
-    border: rgba(0, 0, 0, 0);    
-    border-width: 2px;          
+    background: #2d004d;
+    foreground: #ffffff;
+    selected: #5050ff;
+    border: #2d004d;
+    border-width: 2px;
 }
 
 rofi {
-    normal-bg: rgba(0, 0, 0, 0);
-    normal-fg: #ffffff;         
-    selected-bg: #5050ff;       
-    selected-fg: #ffffff;       
-    urgent-bg: rgba(0, 0, 0, 0);
-    urgent-fg: #ff0000;         
+    normal-bg: #2d004d;
+    normal-fg: #ffffff;
+    selected-bg: #5050ff;
+    selected-fg: #ffffff;
+    alternate-bg: #2d004d;
+    alternate-fg: #ffffff;
+    urgent-bg: #2d004d;
+    urgent-fg: #ff0000;
 }
 
+
+@theme "/usr/share/rofi/themes/arthur.rasi"
