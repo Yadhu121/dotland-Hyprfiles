@@ -13,6 +13,7 @@
     		"format": "{icon} {status}",
     		"format-connected": " {device_alias}",
     		"format-disconnected": " Off",
+		"on-click": "~/.config/waybar/scripts/bluetooth.sh",
     		"format-icons": {
         		"enabled": "", 
         		"disabled": "",
