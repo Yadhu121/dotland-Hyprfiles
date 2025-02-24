@@ -1,13 +1,20 @@
 #!/bin/bash
 
-devices=$(bluetoothctl devices | awk '{print $2, $3, $4, $5}')
+bar_height=1
+icon_offset=1520
 
-selected=$(echo -e "Toggle Bluetooth\n$devices" | wofi --dmenu --width 300 --lines 10)
+eval $(wlrctl layer-shell list | jq -r '
+    .[] | select(.namespace=="waybar") | 
+    .exclusive_zone as $bar_height | 
+    .output_geometry as $screen | 
+    .surfaces[] | select(.namespace=="waybar.bluetooth") | 
+    "X=\(.geometry.x) Y=\($bar_height + .geometry.y)"')
 
-if [[ "$selected" == "Toggle Bluetooth" ]]; then
-    bluetoothctl power toggle
-elif [[ -n "$selected" ]]; then
-    mac=$(echo "$selected" | awk '{print $1}')
-    bluetoothctl connect "$mac"
-fi
+X=$((X + icon_offset))
+Y=$((Y + bar_height)) 
+
+wofi --dmenu --width 250 --height 200 --location 1 --xoffset $X --yoffset $Y <<EOF
+Toggle Bluetooth
+Scan Devices
+EOF
 
