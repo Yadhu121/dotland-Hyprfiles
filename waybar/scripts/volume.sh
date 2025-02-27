@@ -1,13 +1,16 @@
 #!/bin/bash
 
-# Get the current volume level
-VOLUME=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print int($2 * 100)}')
+# Path to a temporary file that tracks clicks
+CLICK_FILE="/tmp/waybar-volume-click"
 
-# Use slurp to select the volume level
-NEW_VOLUME=$(slurp -o | awk -F',' '{print int(($1 / 1920) * 100)}')
-
-# If the user didn't cancel, set the new volume
-if [ -n "$NEW_VOLUME" ]; then
-    wpctl set-volume @DEFAULT_AUDIO_SINK@ $(echo "$NEW_VOLUME / 100" | bc -l)
+# Check if the file exists from a previous click
+if [ -f "$CLICK_FILE" ]; then
+    # If the file exists, it means this is a double-click
+    rm "$CLICK_FILE"
+    wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+else
+    # Otherwise, create the file and wait for another click
+    touch "$CLICK_FILE"
+    (sleep 0.3 && [ -f "$CLICK_FILE" ] && rm "$CLICK_FILE" && ~/.config/waybar/scripts/volume2.sh) &
 fi
 

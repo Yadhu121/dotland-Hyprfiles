@@ -22,7 +22,8 @@
     font-size: 17px;
     font-family: monospace;
     font-weight: 700;
-    color: #D98324;
+    color: #E8F9FF;
+    margin-right: 20px;
 }
 
 #workspaces button {
@@ -81,4 +82,18 @@ window#waybar {
 
 window {
 	color: #B5CFB7;
+}
+
+#custom-spotify {
+	margin-right: 10px;
+	color: #1ED760;
+}
+
+#custom-firefox {
+	margin-right: 10px;
+	color: #FF7139; 
+}
+
+#custom-reddit {
+	color: #FF4500;
 }
