@@ -35,8 +35,9 @@
 #workspaces button.active {
 	color: red;
 	background: transparent;
-	border-radius: 0px;
+	border-radius: 50%;
 	padding: 5px;
+	box-shadow: -5px -5px 0px 0px rgba(255, 255, 255, 0.1);
 }
 
 #window, #hyprland-window {
